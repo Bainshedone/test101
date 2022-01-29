@@ -27,12 +27,13 @@ jobs:
          continue-on-error: true
          run: |
             apt -qq update && apt -qq install -y --no-install-recommends git ffmpeg aria2c
+            git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 test
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/auto-encode-test test && cd test && pip3 install -r requirements.txt
-       - name: cloning current repo
-         continue-on-error:  true
-         run: |
-            git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
-            cd app && sudo mv link.py /test
+#        - name: cloning current repo
+#          continue-on-error:  true
+#          run: |
+#             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
+#             cd app && sudo mv link.py /test
        - name: Running
          timeout-minutes: 350
          continue-on-error: true
