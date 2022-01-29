@@ -28,13 +28,12 @@ jobs:
          run: |
             apt -qq update && apt -qq install -y --no-install-recommends git ffmpeg aria2c
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/auto-encode-test test && cd test && pip3 install -r requirements.txt
+            ls ${{ github.workspace }}
        - name: cloning current repo
          continue-on-error:  true
          run: |
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
-            sudo mv app/link.py /test && rm -rf app
-            ls ${{ github.workspace }}
-            cd test && ls test
+            sudo mv app/link.py test\ && rm -rf app
        - name: Running
          timeout-minutes: 350
          continue-on-error: true
