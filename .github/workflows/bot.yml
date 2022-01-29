@@ -32,4 +32,4 @@ jobs:
          timeout-minutes: 350
          continue-on-error: true
          run: |
-           aria2c --daemon=true --enable-rpc=true -j5 -x5 && cd test && python3 ariatest.py
+           aria2c --daemon=true --enable-rpc=true -j5 -x5 && cd test && python3 ariatest.py 
