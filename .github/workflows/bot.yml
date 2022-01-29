@@ -32,8 +32,9 @@ jobs:
          continue-on-error:  true
          run: |
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
-            sudo mv app/link.py /test/test && rm -rf app
+            sudo mv app/link.py /test && rm -rf app
             ls ${{ github.workspace }}
+            cd test && ls test
        - name: Running
          timeout-minutes: 350
          continue-on-error: true
