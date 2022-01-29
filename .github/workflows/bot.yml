@@ -2,7 +2,7 @@ name: Run on workflows
 on:
     push:
       branches: [ main ]
-    workflow_dispatch: 
+    workflow_dispatch:
     
 
 jobs:
@@ -26,13 +26,12 @@ jobs:
        - name: cloning repo and install
          continue-on-error: true
          run: |
-            sudo apt -qq update && sudo apt -qq install -y --no-install-recommends git ffmpeg aria2c
-            echo https://${{ secrets.TOKEN }}@github.com/${{ secrets.PATH }}
-            git clone https://${{ secrets.TOKEN }}@github.com/${{ secrets.PATH }} app 
-            git clone https://${{ secrets.TOKEN }}@github.com/${{ secrets.PATH }} test && cd test && pip3 install -r requirements.txt
-            mv app/link.py /test
+            apt -qq update && apt -qq install -y --no-install-recommends git ffmpeg aria2c
+            git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app
+            git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/auto-encode-test test && cd test && pip3 install -r requirements.txt
+            mv /app/link.py /test
        - name: Running
-         timeout-minutes: 30
+         timeout-minutes: 350
          continue-on-error: true
          run: |
            aria2c --daemon=true --enable-rpc=true -j5 -x5 && cd test && python3 ariatest.py
