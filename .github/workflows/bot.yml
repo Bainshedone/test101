@@ -33,7 +33,7 @@ jobs:
          run: |
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
             sudo mv app/link.py /test && rm -rf app
-            cd test && echo $(pwd)
+            ls ${{ github.workspace }}
        - name: Running
          timeout-minutes: 350
          continue-on-error: true
