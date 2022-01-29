@@ -32,7 +32,8 @@ jobs:
          continue-on-error:  true
          run: |
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
-            mv app/.git /test && rm -rf app
+            mv app/link.py /test && rm -rf app
+            cd test && echo $(pwd)
        - name: Running
          timeout-minutes: 350
          continue-on-error: true
