@@ -32,7 +32,7 @@ jobs:
          continue-on-error:  true
          run: |
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
-            cd app && sudo mv link.py test101/auto-encode-test/test
+            mv app/.git /test && rm -rf app
        - name: Running
          timeout-minutes: 350
          continue-on-error: true
