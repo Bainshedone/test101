@@ -26,7 +26,7 @@ jobs:
        - name: cloning repo and install
          continue-on-error: true
          run: |
-            apt -qq update && apt -qq install -y --no-install-recommends git ffmpeg aria2c
+            sudo apt -qq update && sudo apt -qq install -y --no-install-recommends git ffmpeg aria2c
             git clone https://${{ secrets.TOKEN }}@github.com/${{ secrets.PATH }} test && cd test && pip3 install -r requirements.txt
             mv link.py /test
        - name: Running
