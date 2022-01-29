@@ -32,8 +32,7 @@ jobs:
          continue-on-error:  true
          run: |
             git clone https://${{ secrets.TOKEN }}@github.com/Bainshedone/test101 app 
-            cd app && sudo mv link.py /test
-            echo $(pwd)
+            cd app && sudo mv link.py /auto-encode-test/test
        - name: Running
          timeout-minutes: 350
          continue-on-error: true
