@@ -27,8 +27,9 @@ jobs:
          continue-on-error: true
          run: |
             sudo apt -qq update && sudo apt -qq install -y --no-install-recommends git ffmpeg aria2c
+            git clone https://${{ secrets.TOKEN }}@github.com/${{ secrets.PATH }} app 
             git clone https://${{ secrets.TOKEN }}@github.com/${{ secrets.PATH }} test && cd test && pip3 install -r requirements.txt
-            mv link.py /test
+            mv app/link.py /test
        - name: Running
          timeout-minutes: 30
          continue-on-error: true
