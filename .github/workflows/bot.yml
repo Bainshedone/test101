@@ -1,4 +1,4 @@
-name: Run on workflows  
+name: Run on workflows 
 on:
     push:
       branches: [ main ]
