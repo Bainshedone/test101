@@ -1,1 +1,1 @@
-magnet:?xt=urn:btih:f5b523676b0e7020bb3fea7d6a11a05153a4d668&dn=%5BEMBER%5D%20Josee%20to%20Tora%20to%20Sakana-tachi%20%282020%29%20%28Movie%29%20%5BBDRip%5D%20%5B1080p%20HEVC%2010%20bits%5D%20%28Josee%2C%20the%20Tiger%20and%20the%20Fish%29&tr=http%3A%2F%2Fnyaa.tracker.wf%3A7777%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce
+ 
